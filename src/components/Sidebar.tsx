@@ -15,9 +15,9 @@ type NavItem = {
 };
 
 const NAV_ITEMS: NavItem[] = [
-  { href: "/", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/subscriptions", label: "Subscriptions", icon: ListChecks },
-  { href: "/subscriptions/new", label: "Add Subscription", icon: PlusCircle },
+  { href: "/subscriptions-new", label: "Add Subscription", icon: PlusCircle },
   { href: "/reminders", label: "Reminders", icon: Bell },
   { href: "/settings", label: "Settings", icon: Settings },
 ];

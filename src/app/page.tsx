@@ -1,11 +1,5 @@
-import Dashboard from "@/components/Dashboard";
-import { Sidebar } from "@/components/Sidebar";
-import { useState } from "react";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div className="mb-5">
-      <Dashboard />
-    </div>
-  );
+  redirect("/dashboard");
 }

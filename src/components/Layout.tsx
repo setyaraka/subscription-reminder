@@ -20,27 +20,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Sidebar mobileOpen={mobileOpen} setMobileOpen={setMobileOpen} collapsed={collapsed} />
 
       <div className={cn("flex-1 transition-[padding] duration-200", collapsed ? "md:pl-16" : "md:pl-72")}>
-        {/* <header className="sticky top-0 z-30 flex items-center justify-between gap-2 border-b bg-white/80 px-3 py-3 backdrop-blur">
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => setMobileOpen(true)}
-              className="rounded-lg p-2 hover:bg-gray-100 md:hidden"
-              aria-label="Open menu"
-            >
-              <Menu className="h-6 w-6" />
-            </button>
-
-            <button
-              onClick={() => setCollapsed((v) => !v)}
-              className="hidden rounded-lg p-2 hover:bg-gray-100 md:inline-flex"
-              aria-label="Toggle sidebar"
-            >
-              <Menu className="h-5 w-5" />
-            </button>
-
-            <span className="font-semibold">Subscription Helper</span>
-          </div>
-        </header> */}
          <Navbar
           collapsed={collapsed}
           setCollapsed={setCollapsed}
