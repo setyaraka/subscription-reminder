@@ -1,7 +1,6 @@
 // app/page.tsx
 "use client";
 
-import { Sidebar } from "@/components/Sidebar";
 import Link from "next/link";
 import { useMemo } from "react";
 import {
