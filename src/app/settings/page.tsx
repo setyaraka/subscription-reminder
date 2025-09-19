@@ -165,7 +165,14 @@ export default function SettingsPage() {
           <div className="flex flex-col items-center gap-2">
             <div className="h-20 w-20 overflow-hidden rounded-full border bg-gray-50">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={profile.avatarDataUrl || "/avatar-placeholder.png"} alt="avatar" className="h-full w-full object-cover" />
+              { profile.avatarDataUrl ? (
+                    <img src={profile.avatarDataUrl} alt="avatar" className="h-full w-full object-cover" />
+                ) : (
+                    <div className="flex h-full w-full items-center justify-center rounded-full bg-gray-200 text-2xl font-semibold text-gray-700 dark:bg-neutral-700 dark:text-white">
+                        {(profile?.name?.[0] ?? "N").toUpperCase()}
+                    </div>
+                )
+                }
             </div>
             <button
               type="button"
