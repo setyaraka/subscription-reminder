@@ -2,13 +2,21 @@
 
 import { useState } from "react";
 import { Sidebar } from "@/components/Sidebar";
-import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Navbar from "./Navbar";
+import { redirect, usePathname } from "next/navigation";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
+  const pathname = usePathname();
+
+  const AUTH_ROUTES = ["/login"];
+  const isAuth = AUTH_ROUTES.some((p) => pathname === p || pathname.startsWith(p + "/"));
+
+  if(isAuth){
+    return <main className="min-h-screen">{children}</main>
+  }
 
   const demoNotif = [
     { id: "1", title: "Netflix due in 3 days", subtitle: "Rp 65.000", badge: "info" as const },
@@ -18,7 +26,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-screen">
       <Sidebar mobileOpen={mobileOpen} setMobileOpen={setMobileOpen} collapsed={collapsed} />
-
       <div className={cn("flex-1 transition-[padding] duration-200", collapsed ? "md:pl-16" : "md:pl-72")}>
          <Navbar
           collapsed={collapsed}
@@ -35,7 +42,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           onLogout={() => {
             // Jika pakai NextAuth:
             // signOut();
+            localStorage.removeItem("auth");
             alert("Logout clicked");
+            redirect("/login");
           }}
         />
 
