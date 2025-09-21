@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [collapsed, setCollapsed] = useState(false);
   const pathname = usePathname();
 
-  const AUTH_ROUTES = ["/login"];
+  const AUTH_ROUTES = ["/login", "/register"];
   const isAuth = AUTH_ROUTES.some((p) => pathname === p || pathname.startsWith(p + "/"));
 
   if(isAuth){
@@ -35,13 +35,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           notifications={demoNotif}
           locale="id"
           onLocaleChange={(loc) => {
-            // contoh sederhana: simpan di localStorage dan set <html lang>
             localStorage.setItem("locale", loc);
             document.documentElement.lang = loc;
           }}
           onLogout={() => {
-            // Jika pakai NextAuth:
-            // signOut();
             localStorage.removeItem("auth");
             alert("Logout clicked");
             redirect("/login");
