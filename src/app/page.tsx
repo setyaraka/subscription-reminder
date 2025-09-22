@@ -48,7 +48,7 @@ export default function Home() {
             Kelola langganan tanpa drama.
           </h1>
           <p className="mt-4 text-gray-600 md:text-lg">
-            Catat semua subscription kamu, dapatkan pengingat tepat waktu, dan temukan peluang untuk hemat—semuanya dalam satu dashboard.
+            Catat semua subscription kamu, dapatkan pengingat tepat waktu, dan temukan peluang untuk hemat, semuanya dalam satu dashboard.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -112,7 +112,7 @@ export default function Home() {
             Input cepat, status aktif/akan datang/dibatalkan, dan catatan vendor.
           </Feature>
           <Feature icon={<Bell className="h-5 w-5" />} title="Pengingat Otomatis">
-            Email & WhatsApp H-1/H-3/H-7—anti telat bayar.
+            Email & WhatsApp H-1/H-3/H-7, anti telat bayar.
           </Feature>
           <Feature icon={<CalendarClock className="h-5 w-5" />} title="Timeline Tagihan">
             Lihat apa saja yang jatuh tempo 14–30 hari ke depan.
@@ -124,7 +124,7 @@ export default function Home() {
             Deteksi layanan yang bisa dipause/cancel.
           </Feature>
           <Feature icon={<Globe className="h-5 w-5" />} title="Multi-currency & i18n">
-            ID/EN + IDR/USD/SGD/EUR—pilih sesuai kebutuhanmu.
+            ID/EN + IDR/USD/SGD/EUR, pilih sesuai kebutuhanmu.
           </Feature>
         </div>
       </section>
