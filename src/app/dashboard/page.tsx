@@ -245,7 +245,7 @@ export default function Dashboard() {
             </p>
           </div>
           <Link
-            href="/subscriptions/new"
+            href="/subscriptions-new"
             className="inline-flex items-center gap-2 rounded-xl bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:opacity-90"
           >
             <PlusCircle className="h-4 w-4" /> Add Subscription
