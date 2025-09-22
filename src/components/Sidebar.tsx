@@ -7,6 +7,7 @@ import {
   LayoutDashboard, ListChecks, PlusCircle, Bell, Settings,
 } from "lucide-react";
 import { useEffect } from "react";
+import Logo from "./logo";
 
 type NavItem = {
   href: string;
@@ -42,9 +43,16 @@ export function Sidebar({
     <nav className="flex h-full flex-col gap-2 bg-white/90 p-3 backdrop-blur">
       {/* Header */}
       <div className={cn("mb-3 px-2", collapsed && "items-center px-0 text-center")}>
-        <Link href="/" className="block text-lg font-bold tracking-tight">
+        <Link href="/dashboard" className="block">
+        {collapsed ? (
+          <Logo className="mx-auto" size={22} />
+        ) : (
+          <Logo withText className="text-gray-900 dark:text-white" size={22} />
+        )}
+      </Link>
+        {/* <Link href="/" className="block text-lg font-bold tracking-tight">
           {collapsed ? "SH" : "Subscription Helper"}
-        </Link>
+        </Link> */}
         {!collapsed && (
           <p className="text-xs text-muted-foreground">Control your recurring costs</p>
         )}
