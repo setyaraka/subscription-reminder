@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [collapsed, setCollapsed] = useState(false);
   const pathname = usePathname();
 
-  const AUTH_ROUTES = ["/login", "/register"];
+  const AUTH_ROUTES = ["/", "/login", "/register"];
   const isAuth = AUTH_ROUTES.some((p) => pathname === p || pathname.startsWith(p + "/"));
 
   if(isAuth){
