@@ -1,3 +1,4 @@
+import Logo from "@/components/logo";
 import { ArrowRight, Bell, CalendarClock, Check, Globe, ListChecks, PiggyBank, Wallet } from "lucide-react";
 import Link from "next/link";
 
@@ -11,7 +12,11 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* NAV (landing-only) */}
       <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4">
-        <Link href="/" className="text-lg font-semibold tracking-tight">Subscription Helper</Link>
+        {/* <Link href="/" className="text-lg font-semibold tracking-tight">Subscription Helper</Link> */}
+        <Link href="/" className="inline-flex items-center gap-2">
+          <Logo size={22} />
+          <span className="text-lg font-semibold tracking-tight">Subscription Helper</span>
+        </Link>
         <nav className="hidden items-center gap-6 md:flex">
           <a href="#features" className="text-sm text-gray-600 hover:text-gray-900">Features</a>
           <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900">Pricing</a>
