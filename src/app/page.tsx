@@ -1,6 +1,5 @@
 import { ArrowRight, Bell, CalendarClock, Check, Globe, ListChecks, PiggyBank, Wallet } from "lucide-react";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 
 export const metadata = {
     title: "Subscription Helper — Track & Cancel Subscriptions Easily",
